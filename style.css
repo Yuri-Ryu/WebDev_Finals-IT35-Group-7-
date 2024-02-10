@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+/* Variables */
+:root{
+    --main-color: #800000;
+    --second-color: #615f58ee;
+    --text-color: #1b1b1b;
+    --background-color: #fff;
+}
+
+body{
+    background: url(img/bg.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+header{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    color: var(--background-color);
+    background: var(--main-color);
+    column-gap: 20px;
+    padding: 10px;
+    z-index: 999;
+    transition: 0.5s linear;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header h1{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.logo{
+    margin-left: 30px;
+}
+
+.text{
+    font-size: larger;
+    line-height: 30px;
+}
+
+.text h3{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+    margin-left: 500px;
+}
+.navbar li{
+    position: relative;;
+}
+
+.navbar a{
+    padding: 8px 30px;
+    color: var(--background-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 650;
+    letter-spacing: 3px;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--text-color);
+    transition: 0.3s all linear;
+}
+
+.navbar a.active::after,
+.navbar a:hover::after{
+    content: "";
+    width: 28%;
+    height: 2.5px;
+    background: var(--text-color);
+    position: absolute;
+    bottom: -4px;
+    left: 30px;
+    border-radius: 0.2rem;
+    transition: 0.3s all linear;
+}
+
+hr {
+    margin: 10px;
+    border: 1px solid var(--main-color);
+}
+
+p{
+    text-align: justify;
+    line-height: 25px;
+}
+
+.heading-part{
+    color: var(--background-color);
+    background: var(--main-color);
+    padding: 10px; /* Increased padding for a better appearance */
+    text-align: center;
+    margin-bottom: 23px;
+    border-radius: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.form-container {
+    width: 100%;
+    height: 85vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+.health-form{
+    width: 800px;
+    margin: 20px;
+    position: relative;
+}
+
+.form-info {
+    background: #ffdd00ea;
+    padding: 1rem;
+    border-radius: 5px; /* Increased border-radius for a smoother look */
+    
+}
+.additionalOptions{
+    display: hidden;
+}
+.single-col-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+.single-col-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.double-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.single-col-3-p2{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+@media (max-width: 668px) {
+    .double-col,
+    .single-col-3,
+    .single-col-4,
+    .single-col-3-p2 {
+        grid-template-columns:  1fr;
+    }
+}
+
+.form-info input,
+.form-info select {
+    width: 100%;
+    height: 35px;
+    padding: 10px; /* Increased padding for better touch experience */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Increased margin for better spacing */
+}
+
+.form-info input::placeholder {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.244);
+}
+
+.agree-cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.agree-cont input{
+    margin-right: 10px;
+}
+
+.agree-cont p{
+    font-size: 16px;
+}
+
+.form-info input:focus,
+.form-info select:focus {
+    background: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+.form-info .yesNo input[type="radio"],  input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+.question{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question1{
+    margin-bottom: 16px;
+}
+.question2{
+    margin-bottom: 16px;
+}
+.btn-submit {
+    background: #800000ab;
+    border: none;
+    padding: 16px; /* Increased padding for better touch experience */
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Increased font size for better visibility */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 2px;
+    float: right;
+    border: 1px solid #ffdd00;
+}
+
+.btn-submit:hover {
+    background-color: #800000;
+}
+.hidden{
+    display: none;
+}

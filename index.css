@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Variables */
+:root{
+  --main-color: #800000;
+  --second-color: #615f58ee;
+  --text-color: #1b1b1b;
+  --background-color: #fff;
+}
+
+body{
+  background: url(img/bg2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+header{
+  position: sticky;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  background: var(--background-color);
+  column-gap: 20px;
+  padding: 10px;
+  z-index: 999;
+  transition: 0.5s linear;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.logo img{
+  width: 100px;
+}
+.logo{
+  margin-left: 30px;
+}
+.text{
+  font-size: larger;
+  line-height: 30px;
+}
+
+.text h3{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+    margin-left: 500px;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    padding: 8px 30px;
+    color: var(--text-color) ;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 650;
+    letter-spacing: 3px;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    transition: 0.3s all linear;
+}
+.navbar a.active::after,
+.navbar a:hover::after{
+    content: "";
+    width: 28%;
+    height: 2.5px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 30px;
+    border-radius: 0.2rem;
+}
+
+/* Home Page */
+.home-page{
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  gap: 10rem; 
+}
+
+.home-text h1{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 154px;
+  margin-left: 50px;
+  padding-bottom: 10px;
+  font-size: 4.5rem;
+  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
+
+.home-text h2{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 50px;
+  font-size: 4.5rem;
+  color: var(--background-color);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
+
+.btn1{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 19px 60px;
+  border-radius: 100px;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 55px;
+  margin-top: 35px;
+}
+
+.btn1:hover{
+  background: #FECB00;
+  transition: 0.2s all linear;
+}
+
+.home-page::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Copyright */
+.copyright{
+  padding: 20px;
+  text-align: center;
+  background: var(--second-color)
+}
+.copyright p{
+  color: var(--background-color)
+}

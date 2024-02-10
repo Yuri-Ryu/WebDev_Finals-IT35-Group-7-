@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatibile" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <!-- Logo -->
+            <link rel="icon" href="img/Polytechnic University of the Philippines.png" type="image/x-icon">
+
+            <!-- Title -->
+            <title>PUP - Medical Health Declaration Form</title>
+
+            <!-- Link to CSS -->
+            <link rel="stylesheet" href="style.css">
+
+            <script src="main.js"></script>
+
+            <!-- Link to Box Icons -->
+        </head>
+
+        <body>
+            <!-- Navigation Bar -->
+            <header>
+                <div class="logo">
+                    <img src="img/Polytechnic University of the Philippines.png" alt="">
+                </div>
+                <div class="text-head">
+                    <div class="text">
+                        <p class="rep">Republic of the Philippines</p>
+                    </div>
+                    <div class="text">
+                        <h3>Polytechnic University of the Philippines</h3>
+                    </div>
+                    <div class="text">
+                        <p class="med">Medical Services Department</p>
+                    </div>
+                </div>
+                <div class="home">
+                    <ul class="navbar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="form-container">
+        
+                <!-- Student Information-->
+                <div class="outer-cont">
+
+                
+                <form id="health-form" class="health-form" name="dataform" action="https://script.google.com/macros/s/AKfycbw7sjNJkB40Y7FNVCM15z7IImt3gJX7sPkBOW7_PACNEIEbOf-UruGLxbEsol5RuLDL/exec" method="post">
+                    <div class="form-info">
+                        <div id="student-info" class="parts">
+                            <h2 class="heading-part">Student Information</h2>
+                            <div class="single-col-3">
+                                <div> 
+                                    <label for="">Last Name</label><br>
+                                    <input type="text" placeholder="" id="lname" name="Last Name" required>
+                                </div>
+                                <div> 
+                                    <label for="">First Name</label><br>
+                                    <input type="text" placeholder="" id="fname" name="First Name" required>
+                                </div>
+                                <div> 
+                                    <label for="">Middle Initial</label><br>
+                                    <input type="text" id="mname" name="Middle Name">
+                                </div>
+                            </div>
+                            <div class="double-col"> 
+                            <div>
+                                <label for="">Student Number</label><br>
+                                <input type="text" placeholder="Student Number" id="student-num" name="Student Number" required>
+                            </div>
+                            <div>
+                                <label for="">School Year</label><br>
+                                <input type="text" placeholder="ex. 2023-2024" id="sy" name="School Year" required>
+                            </div>
+                            <div>
+                                <label for="">Course / College</label><br>
+                                <input type="text" placeholder="ex. BSIT" id="course" name="Course" required>
+                            </div>
+                            <div>
+                                <label for="">Home Address</label><br> 
+                                <input type="text" id="home-add" name="Home Address" required>
+                            </div>
+                            </div>
+                            <div class="single-col-4">
+                                <div>
+                                    <label for="">Age</label>
+                                    <input type="number" id="age" min="1" max="100" name="Age" required>
+                                </div>
+                            <div>
+                                <label for="sex">Sex</label>
+                                <select name="Sex" id="sex" required>
+                                    <option value="">Choose</option>
+                                    <option  >Male</option>
+                                    <option >Female</option>
+                                </select>
+                            </div>
+                            <div> 
+                                <label for="status">Civil Status</label>
+                                <select name="Status" id="status" required>
+                                    <option value="choose">Choose</option>
+                                    <option >Single</option>
+                                    <option >Married</option>
+                                    <option >Widowed</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">Blood Type</label><br>
+                                <select type="text" id="blood" name="Blood Type" required>
+                                    <option value="">Choose</option>
+                                    <option value="N/A" name="Blood Type">N/A</option>
+                                    <option value="A+"name="Blood Type">A<sub>+</sub></option>
+                                    <option value="A-"name="Blood Type">A<sub>-</sub></option>
+                                    <option value="B+"name="Blood Type">B<sub>+</sub></option>
+                                    <option value="B-"name="Blood Type">B<sub>-</sub></option>
+                                    <option value="AB+"name="Blood Type">AB<sub>+</sub></option>
+                                    <option value="AB-"name="Blood Type">AB<sub>-</sub></option>
+                                    <option value="O+"name="Blood Type">O<sub>+</sub></option>
+                                    <option value="O-"name="Blood Type">O<sub>-</sub></option>
+                                </select>
+                            </div>
+                            </div>
+                            <div class="double-col">
+                            <div>
+                                <label for="">Parent's Name / Guardian / Spouse:</label><br>
+                                <input type="text" id="guardian" name="Parent/Guardian" required>
+                            </div>
+                            <div>
+                                <label for="">Email Address</label><br>
+                                <input type="email" id="email" name="Email" required>
+                            </div>
+                            <div>
+                                <label for="">Landline</label><br>
+                                <input type="text" placeholder="N/A if not applicable" id="landline" name="Landline">
+                            </div>
+                            <div>
+                                <label for="">Cellphone</label><br>
+                                <input type="tel" placeholder="09*********"  id="cellphone" name="Cellphone" pattern="[0-9]{11}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Medical History-->
+                    <div id="medical-history" class="parts">
+                        <h2 class="heading-part">Medical History</h2>
+                            <div class="single-col-3-p2">
+                                <p class="question">1. Do you need medical attention or has known medical illness?</p>
+                                <div class="yesNo">
+                                    <input type="radio" 
+                                    value="Yes" id="yes" name="yesNo" onchange="toggleCheckboxes(true)">
+                                    <label for="yes">Yes</label>
+                                </div>
+                                <div class="yesNo">
+                                    <input type="radio" value="No" id="no" name="yesNo" onchange="toggleCheckboxes(true)">
+                                    <label for="no">No</label>
+                                </div>
+                            </div>
+                            <div id="additionalOptions" class="hidden">
+                                <p class="question1"><i>(Please check the following that apply and give more information as needed)</i></p>
+                                <div class="single-col-4">
+                                    <div>
+                                        <input type="checkbox" id="Asthma" name="Illness" value="Asthma">
+                                        <label for="Asthma">Asthma</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="LoC" name="Illness" value="Loss of Consciousness">
+                                        <label for="LoC">Loss of Consciousness</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="eye" name="Illness" value="Eye Disease/Defect">
+                                        <label for="eye">Eye Disease/Defect</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="Accident" name="Illness" value="Accident Injuries">
+                                        <label for="Accident">Accident Injuries</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="Diabetes" name="Illness" value="Diabetes">
+                                        <label for="Diabetes">Diabetes</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="HeartDisease" name="Illness" value="Heart Disease">
+                                        <label for="Heart">Heart Disease</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="KidneyDisease" name="Illness" value="Kidney Disease">
+                                        <label for="KidneyDisease">Kidney Disease</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="tbpc" name="Illness" value="Tuberculosis">
+                                        <label for="tbpc">Tuberculosis</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="Epilepsy" name="Illness" value="Convulsion/Epilepsy">
+                                        <label for="Epilepsy">Convulsion/Epilepsy</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="Hyperventilation" name="Illness" value="Hyperventilation">
+                                        <label for="Hyperventilation">Hyperventilation</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="Diabetes" name="Illness" value="Hemophilia">
+                                        <label for="Hemophilia">Hemophilia</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="Migraine" name="Illness" value="Migraine">
+                                        <label for="Migraine">Migraine</label>
+                                    </div>  
+                                    <div>
+                                        <input type="checkbox" id="HighBloodPressure" name="Illness" value="High Blood Pressure">
+                                        <label for="HighBloodPressure">High Blood Pressure</label>
+                                    </div>  
+                                </div>
+                                <div>
+                                    <label for="">Others (Pls. Indicate):</label><br>
+                                    <input type="text" id="others" name="Other Illness">
+                                </div>
+                            </div>
+                            <div class="single-col">
+                                <p class="question">2. Additional Information for Students with Medical Conditions:</p>
+                                <p class="question2">As a Parent/Guardian, I would like to declare that my child had history of allergies to the following:</p>
+                                <div class="double-col">
+                                    <div>
+                                        <label for="">Food</label><br>
+                                        <input type="text" id="food" name="Food">
+                                    </div>
+                                    <div>
+                                        <label for="">No Known Allergies</label><br>
+                                        <input type="text" id="allergy" name="Allergy">
+                                    </div> 
+                                </div>
+                                <label for="">Medicine:</label>
+                                <div class="single-col-3">
+                                    <div>
+                                        <input type="checkbox" id="Aspirin" name="Medicine" value="Aspirin" class="choices">
+                                        <label for="Aspirin">Aspirin</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="Ibuprofen" name="Medicine" value="Ibuprofen" class="choices">
+                                        <label for="Ibuprofen">Ibuprofen</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="Amoxicillin" name="Medicine" value="Amoxicillin" class="choices">
+                                        <label for="Amoxicillin">Amoxicillin</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="MefenamicAcid" name="Medicine" value="Mefenamic Acid" class="choices">
+                                        <label for="MefenamicAcid">Mefenamic Acid</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="Penicillin" name="Medicine" value="Penicillin" class="choices">
+                                        <label for="Penicillin">Penicillin</label>
+                                    </div>
+                                    <div sr>
+                                        <label for="others">Others:</label>
+                                        <input type="text" id="others" name="Other Medicine" class="choices">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- Personal History-->
+                    <div id="personal-history" class="parts">
+                        <h2 class="heading-part">Personal History</h2>
+                            <div class="single-col-3-p2">
+                                <p class="question">Cigarette Smoking:</p>
+                                <div class="yesNo">
+                                    <input type="radio" id="yes-cigarette" name="yesNo-cigarette" value="YES">
+                                    <label for="yes-cigarette">Yes</label>
+                                </div>
+                                <div class="yesNo">
+                                    <input type="radio" id="no-cigarette" name="yesNo-cigarette" value="NO">
+                                    <label for="yesNo-cigarette" value="NO">No</label>
+                                </div>
+                            </div>
+                            <div class="single-col-3-p2">
+                                <p class="question">Alcohol Drinking:</p>
+                                <div class="yesNo">
+                                    <input type="radio" id="yes-alco" name="yesNo-alco" value="YES">
+                                    <label for="yesNo-alco">Yes</label>
+                                </div>
+                                <div class="yesNo">
+                                    <input type="radio" id="no-alco" name="yesNo-alco" value="NO">
+                                    <label for="yesNo-alco" value="NO">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="agree-cont">
+                            <input type="checkbox" name="agree" id="agree" required><p class="agree-p"> I hereby state to the best of my knowledge, my answers to the above questions are complete and correct.</p>
+                        </div>
+                        <!-- Submit -->
+                        </div>
+                        <input type="submit" value="SUBMIT" class="btn-submit">
+                        </div>
+                    </div>
+                    </div>
+                </form>
+            </div>  
+            
+            <!-- Link to Javascript-->
+            <script src="main.js"></script>
+        </body>
+    
+    </html>
